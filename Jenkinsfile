@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     tools {
@@ -7,7 +8,7 @@ pipeline {
         stage('Clonar repositorio') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/sebastianignaciosantillan/vehiculos-api'
+                    url: 'https://github.com/sebastianignaciosantillan/vehiculos-api.git'
             }
         }
         stage('Compilar proyecto') {
@@ -31,3 +32,4 @@ pipeline {
         }
     }
 }
+
