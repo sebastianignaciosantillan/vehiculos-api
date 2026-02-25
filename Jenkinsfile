@@ -30,7 +30,7 @@ pipeline {
         sh '''
             docker stop vehiculos-container || true
             docker rm vehiculos-container || true
-            docker run -d --name vehiculos-container --network host vehiculos-app
+            docker run -d --name vehiculos-container -p 9090:8080 vehiculos-app
         '''
     }
 }
